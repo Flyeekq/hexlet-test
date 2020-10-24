@@ -1,22 +1,19 @@
-var _ = require("lodash");
-
-const text1 = "";
-const text2 = "one two three two ONE one wow";
-const text3 = "another one sentence with strange Words words";
-
-const countWords = (text) => {
-  let result = {};
-  if (text === "") {
-    return result;
-  } else {
-    let wordsArr = _.words(text.toLowerCase());
-    for (word of wordsArr) {
-      result[word] = result[word] + 1 || 1;
-    }
-    return result;
-  }
+const data = {
+  user: "ubuntu",
+  os: "linux",
+  virtual: false,
 };
 
-//console.log(countWords(text1));
-console.log(countWords(text2));
-console.log(countWords(text3));
+const pick = ["virtual"];
+
+const pickValues = (data, pick) => {
+  let result = {};
+  for (const parametr of pick) {
+    if (data[parametr] !== undefined) {
+      result[parametr] =
+        data[parametr] !== undefined ? data[parametr] : result[parametr];
+    }
+  }
+  return result;
+};
+console.log(pickValues(data, pick));
