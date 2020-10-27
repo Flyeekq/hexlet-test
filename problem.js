@@ -9,12 +9,13 @@ const countWords = (text) => {
     return result;
   } else {
     let wordsArr = _.words(text.toLowerCase());
-    for (word of wordsArr) {
-      result[word] = result[word] + 1 || 1;
+    for (let i = 0; i < wordsArr.length; i += 1) {
+      result[wordsArr[i]] = result[wordsArr[i]] + 1 || 1;
     }
     return result;
   }
 };
-//console.log(countWords(text1));
+
+console.log(countWords(text1));
 console.log(countWords(text2));
 console.log(countWords(text3));
