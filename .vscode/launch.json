@@ -5,6 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Launch Problem",
+            "program": "${workspaceFolder}/problem.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node"
+        },
+        {
             "name": "Node debug",
             "program": "${workspaceFolder}/app.js",
             "request": "launch",
