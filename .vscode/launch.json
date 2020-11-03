@@ -5,8 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch Program",
+            "name": "Node debug",
             "program": "${workspaceFolder}/app.js",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node"
+        },
+        
+        {
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/appl.js",
             "request": "launch",
             "skipFiles": [
                 "<node_internals>/**"
